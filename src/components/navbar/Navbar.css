@@ -1,0 +1,74 @@
+.Nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+
+  background-color: white;
+  border-left: 1px solid #ccc;
+
+  transition: width 300ms ease;
+}
+
+.Nav-open {
+  width: 20%;
+}
+
+.Nav-close {
+  width: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .Nav-open {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .Nav-open {
+    width: 35%;
+  }
+}
+
+.Nav-bar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Nav-bar li {
+  padding: 3%;
+  width: 100%;
+}
+
+.Nav-bar li:hover {
+  background-color: fuchsia;
+}
+
+.Nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.Nav-bar a:hover {
+  color: white;
+}
+
+.Nav-bar-button {
+  position: absolute;
+  top: 50vh;
+  left: -2rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  border-radius: 100%;
+  border: 2px solid #ccc;
+  background-color: white;
+
+  text-align: center;
+
+  transition: rotate 300ms ease;
+}

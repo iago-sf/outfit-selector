@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.Main { 
+  height: 100vh;
+  
+  font-size: 2rem;
+}
+
+h1 {
+  margin: auto;
+  height: 3.5rem;
+}
