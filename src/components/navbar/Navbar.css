@@ -31,28 +31,32 @@
   }
 }
 
-.Nav-bar ul {
+.Nav-bar-ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.Nav-bar li {
-  padding: 3%;
+.Nav-bar-li {
   width: 100%;
 }
 
-.Nav-bar li:hover {
+.Nav-bar-li:hover {
   background-color: fuchsia;
 }
 
-.Nav-bar a {
+.Nav-bar-link {
+  display: block;
+
+  padding: 0.5rem;
+
   text-decoration: none;
   color: black;
   font-size: 1.25rem;
+  text-align: center;
 }
 
-.Nav-bar a:hover {
+.Nav-bar-link:hover {
   color: white;
 }
 

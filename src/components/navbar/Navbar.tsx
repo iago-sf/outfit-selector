@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
-function Navbar () {
+export default function Navbar () {
   const [navState, setNavState] = useState(false)
 
   return (
@@ -9,19 +10,17 @@ function Navbar () {
       <button className={'Nav-bar-button'} onClick={ () => setNavState(navState ? false : true) }>
         &gt;
       </button>
-      <ul>
-        <li>
-          <a href="#">Home</a>
+      <ul className='Nav-bar-ul'>
+        <li className='Nav-bar-li'>
+          <Link className='Nav-bar-link' to="/">Home</Link>
         </li>
-        <li>
-          <a href="#">About</a>
+        <li className='Nav-bar-li'>
+          <Link className='Nav-bar-link' to="/login">Login</Link>
         </li>
-        <li>
-          <a href="#">Contact</a>
+        <li className='Nav-bar-li'>
+          <Link className='Nav-bar-link' to="/form">Añadir</Link>
         </li>
       </ul>
     </nav>
   )
 }
-
-export default Navbar
