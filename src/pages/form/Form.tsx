@@ -1,6 +1,5 @@
-import React from 'react'
-import { Navbar } from '../../components/Exports'
-import './Form.css'
+import { Navbar } from '../../components/Exports';
+import './Form.css';
 
 export default function Form() {
   return (

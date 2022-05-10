@@ -9,10 +9,15 @@
     "tauri": "tauri"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "@tauri-apps/api": "^1.0.0-rc.4",
+    "@types/react-redux": "^7.1.24",
+    "firebase": "^9.8.1",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0-rc.9",

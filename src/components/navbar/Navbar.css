@@ -60,6 +60,19 @@
   color: white;
 }
 
+.Nav-bar-li button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0.7rem;
+  
+  border: 0;
+  background-color: transparent;
+
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
 .Nav-bar-button {
   position: absolute;
   top: 50vh;

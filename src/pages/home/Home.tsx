@@ -1,6 +1,5 @@
-import React from 'react'
-import { Navbar } from '../../components/Exports'
-import './Home.css'
+import { Navbar } from '../../components/Exports';
+import './Home.css';
 
 export default function Home() {
   return (
