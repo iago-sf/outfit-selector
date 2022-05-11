@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { register } from '../../actions/auth';
 import { useAppDispatch } from '../../hooks';
 import { Navbar } from '../../components/Exports';
@@ -38,7 +38,7 @@ export default function Register() {
     const res = await dispatch(register(email, password));
 
     if(res){
-      navigate('/login');
+      navigate('/');
     
     } else {
       setErrs('Email o contraseña inválido');
@@ -46,17 +46,33 @@ export default function Register() {
   }
 
   return (
-    <div>
-      <Navbar />
+      <div className='Container'>
+        <div className='Content'>
+          <h1 className='Title'>Bienvenid@ a Outfit Selector</h1>
+          <form onSubmit={ handleRegister } className='Form'>
+            <h2 className='Form-title'>Registrarse</h2>
+            {
+              errs != '' 
+              ? <h6 className='Errors'> { errs } </h6>
+              : '' 
+            }
+            <div className='Input-div'>
+              <label htmlFor='email' className='Input-label'>Email</label>
+              <input onChange={change} type='text' name='email' value={email} className='Input'/>
+            </div>
 
-      <h1>Register</h1>
-      <h6 className='Errors'>{ errs }</h6>
-      <form onSubmit={ handleRegister }>
-        <input onChange={change} type="text" name='email' value={email}/>
-        <input onChange={change} type="password" name='password' value={password}/>
+            <div className='Input-div'>
+              <label htmlFor='password' className='Input-label'>Contraseña</label>
+              <input onChange={change} type='password' name='password' value={password} className='Input'/>
+            </div>
 
-        <button type='submit'>Login with email</button>
-      </form>
-    </div>
+            <button type='submit' className='Form-button'>Entrar</button>
+          </form>
+
+          <h6 className='Login'>
+            ¿Ya tienes una cuenta? <Link to='/'>Iniciar sesión</Link>
+          </h6>
+        </div>
+      </div>
   )
 }

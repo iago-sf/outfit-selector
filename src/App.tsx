@@ -33,9 +33,17 @@ export default function App() {
     <Provider store={ store }>  
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/" element={
+            log
+            ? <Navigate to="/home" />
+            : <Login />
+          } />
           <Route path="/register" element={<Register />} />
+          <Route path="/home" element={
+            log
+            ? <Home />
+            : <Navigate to="/" />
+          } />
           <Route path="/form" element={
             log 
             ? <Form />
