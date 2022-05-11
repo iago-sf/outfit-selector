@@ -77,10 +77,7 @@ export default function Login() {
           <button type='submit' className='Form-button'>Entrar</button>
         </form>
 
-        <div className='Separator'>
-          <hr className='Separator-line' />
-          <span className='Separator-text'>Or</span>
-        </div>
+        <div className='Separator'></div>
 
         <button onClick={ handleLoginWithGoogle } className='Login-with-google'>
           <label htmlFor='Login with google'>Iniciar con Google</label>
