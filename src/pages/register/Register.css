@@ -1,4 +1,4 @@
-.Errors {
+.Register-errors {
   color: red;
   padding: 0.5rem;
   margin: 0;
@@ -7,20 +7,20 @@
   font-size: .8rem;
 }
 
-.Container {
+.Register-container {
   height: 100vh;
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   position: relative;
 }
 
-.Content {
+.Register-content {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
   width: 80%;
   margin-left: 10%;
-  margin-right: 10;
+  margin-right: 10%;
   text-align: center;
 
   background: rgba( 255, 255, 255, 0.3 );
@@ -32,7 +32,7 @@
 }
 
 @media screen and (min-width: 900px) and (max-width: 1200px) {
-  .Content {
+  .Register-content {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
@@ -40,32 +40,31 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .Content {
+  .Register-content {
     width: 30%;
     margin-left: 35%;
     margin-right: 35%;
   }
 }
 
-.Title {
+.Register-title {
   font-size: 3rem;
   text-align: center;
-  padding: 7%
+  padding-top: 5%
 }
 
-.Form {
-  padding-top: 5%;
+.Register-form {
   padding-left: 10%;
   padding-right: 10%;
 }
 
-.Form-title {
+.Register-form-title {
   padding: 0;
   margin: 0;
   text-align: center;
 }
 
-.Form-button {
+.Register-form-button {
   margin: 1rem;
   padding: .5rem;
   width: 8rem;  
@@ -79,16 +78,16 @@
   transition: box-shadow .1s ease-in-out;
 }
 
-.Form-button:hover {
+.Register-form-button:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
-.Form-button:focus {
+.Register-form-button:focus {
   background-color: rgba(238,174,202,.7); 
   color: white;
 }
 
-.Input {
+.Register-input {
   width: 95%;
   height: 2rem;
   padding-left: .5rem;
@@ -98,19 +97,19 @@
   transition: all .2s ease-in-out;
 }
 
-.Input:focus {
+.Register-input:focus {
   outline: rgba(148,187,233,1) solid;
   transform: scale(1.05);
 }
 
 
-.Input-label {
+.Register-input-label {
   display: block;
   padding-bottom: .2rem;
   text-align: left;
 }
 
-.Input-div {
+.Register-input-div {
   padding: .5rem;
 }
 

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { register } from '../../actions/auth';
 import { useAppDispatch } from '../../hooks';
-import { Navbar } from '../../components/Exports';
 import './Register.css';
 
 export default function Register() {
@@ -46,27 +45,27 @@ export default function Register() {
   }
 
   return (
-      <div className='Container'>
-        <div className='Content'>
-          <h1 className='Title'>Bienvenid@ a Outfit Selector</h1>
-          <form onSubmit={ handleRegister } className='Form'>
-            <h2 className='Form-title'>Registrarse</h2>
+      <div className='Register-container'>
+        <div className='Register-content'>
+          <h1 className='Register-title'>Bienvenid@ a Outfit Selector</h1>
+          <form onSubmit={ handleRegister } className='Register-form'>
+            <h2 className='Register-form-title'>Registrarse</h2>
             {
               errs != '' 
-              ? <h6 className='Errors'> { errs } </h6>
+              ? <h6 className='Register-errors'> { errs } </h6>
               : '' 
             }
-            <div className='Input-div'>
-              <label htmlFor='email' className='Input-label'>Email</label>
-              <input onChange={change} type='text' name='email' value={email} className='Input'/>
+            <div className='Register-input-div'>
+              <label htmlFor='email' className='Register-input-label'>Email</label>
+              <input onChange={change} type='text' name='email' value={email} className='Register-input'/>
             </div>
 
-            <div className='Input-div'>
-              <label htmlFor='password' className='Input-label'>Contraseña</label>
-              <input onChange={change} type='password' name='password' value={password} className='Input'/>
+            <div className='Register-input-div'>
+              <label htmlFor='password' className='Register-input-label'>Contraseña</label>
+              <input onChange={change} type='password' name='password' value={password} className='Register-input'/>
             </div>
 
-            <button type='submit' className='Form-button'>Entrar</button>
+            <button type='submit' className='Register-form-button'>Entrar</button>
           </form>
 
           <h6 className='Login'>

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { googleLogin, login } from '../../actions/auth';
 import { useAppDispatch } from '../../hooks';
-import { Navbar } from '../../components/Exports';
 import './Login.css';
 
 export default function Login() {
@@ -54,27 +53,27 @@ export default function Login() {
   }
 
   return (
-    <div className='Container'>
-      <div className='Content'>
-        <h1 className='Title'>Bienvenid@ a Outfit Selector</h1>
-        <form onSubmit={ handleLogin } className='Form'>
-          <h2 className='Form-title'>Iniciar sesión</h2>
+    <div className='Login-container'>
+      <div className='Login-content'>
+        <h1 className='Login-title'>Bienvenid@ a Outfit Selector</h1>
+        <form onSubmit={ handleLogin } className='Login-form'>
+          <h2 className='Login-form-title'>Iniciar sesión</h2>
           {
             errs != '' 
-            ? <h6 className='Errors'> { errs } </h6>
+            ? <h6 className='Login-errors'> { errs } </h6>
             : '' 
           }
-          <div className='Input-div'>
-            <label htmlFor='email' className='Input-label'>Email</label>
-            <input onChange={change} type='text' name='email' value={email} className='Input'/>
+          <div className='Login-input-div'>
+            <label htmlFor='email' className='Login-input-label'>Email</label>
+            <input onChange={change} type='text' name='email' value={email} className='Login-input'/>
           </div>
 
-          <div className='Input-div'>
-            <label htmlFor='password' className='Input-label'>Contraseña</label>
-            <input onChange={change} type='password' name='password' value={password} className='Input'/>
+          <div className='Login-input-div'>
+            <label htmlFor='password' className='Login-input-label'>Contraseña</label>
+            <input onChange={change} type='password' name='password' value={password} className='Login-input'/>
           </div>
 
-          <button type='submit' className='Form-button'>Entrar</button>
+          <button type='submit' className='Login-form-button'>Entrar</button>
         </form>
 
         <div className='Separator'></div>
