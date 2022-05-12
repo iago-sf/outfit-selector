@@ -10,3 +10,4 @@ export const storage = getStorage(firebase);
 export const provider = new GoogleAuthProvider();
 export const auth = getAuth();
 export const database = getDatabase(firebase);
+export const bucket = '';
